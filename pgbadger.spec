@@ -76,7 +76,7 @@ make test
 %doc README
 %license LICENSE
 %{_bindir}/%{name}
-%{_mandir}/man1/%{name}.1p.gz
+%{_mandir}/man1/%{name}.1p.*
 
 
 %changelog
