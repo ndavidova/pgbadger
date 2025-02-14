@@ -68,7 +68,6 @@ perl Makefile.PL INSTALLDIRS=vendor NO_PACKLIST=1 NO_PERLLOCAL=1
 
 %install
 %make_install
-%{_fixperms} %{buildroot}/*
 
 %check
 make test
