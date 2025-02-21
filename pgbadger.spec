@@ -3,7 +3,15 @@ Version:        13.0
 Release:        %autorelease
 Summary:        PostgreSQL log analyzer with fully detailed reports and graphs
 
-License:        PostgreSQL AND MIT
+
+# List of all licenses - each with an example of a file that uses it
+# PostgreSQL: pgbadger
+# MIT: resources/jqplot
+# Artistic-2.0: pgbadger
+# OFL-1.1: resources/fontawesome.css
+# CC-BY-3.0: /resources/jqplot.canvasTextRenderer.js
+# GPL-2.0-only: resources/jqplot.*
+License:        PostgreSQL AND MIT AND Artistic-2.0 AND OFL-1.1 AND CC-BY-3.0 AND GPL-2.0-only
 URL:            https://github.com/darold/%{name}
 Source:         https://github.com/darold/%{name}/archive/refs/tags/v%{version}.tar.gz
 
@@ -68,6 +76,7 @@ perl Makefile.PL INSTALLDIRS=vendor NO_PACKLIST=1 NO_PERLLOCAL=1
 
 %install
 %make_install
+%{_fixperms} %{buildroot}/%{_bindir}/pgbadger
 
 %check
 make test
